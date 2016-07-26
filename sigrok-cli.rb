@@ -6,7 +6,7 @@ class SigrokCli < Formula
   head 'git://sigrok.org/sigrok-cli',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
   sha256 '73a30501525b13c09624ae00d37041cdaa50238d89c6febf169fc784affe723c'
 
-  depends_on 'libsigrok'
+  depends_on 'mwm/sigrok/libsigrok'
   depends_on 'rene-dev/sigrok/libsigrokdecode'
   depends_on 'libserialport' => :optional
   depends_on 'glib'
