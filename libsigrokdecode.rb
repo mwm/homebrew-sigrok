@@ -6,7 +6,7 @@ class Libsigrokdecode < Formula
   head 'git://sigrok.org/libsigrokdecode',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
   sha256 'fd7e9d1b73245e844ead97a16d5321c766196f946c9b28a8646cab2e98ec3537'
 
-  depends_on 'libsigrok'
+  depends_on 'mwm/sigrok/libsigrok'
   depends_on 'glib'
   depends_on 'pkg-config' => :build
   depends_on :python3
