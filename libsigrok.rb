@@ -3,7 +3,7 @@ require 'formula'
 class Libsigrok < Formula
   url 'http://sigrok.org/download/source/libsigrok/libsigrok-0.4.0.tar.gz'
   homepage 'http://sigrok.org/'
-  head 'git://github.com/mwm/libsigrok',:using => Class.new(GitDownloadStrategy, :revision => 'dos112a') { def support_depth?; false; end }
+  head 'git://github.com/mwm/libsigrok', :branch = 'dos112a', :using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
   sha256 '5f291f3fee36e6dab1336f1c78596e50588831bc5ebd7cddc2a95fe8c71d669e'
 
   depends_on 'libzip'
